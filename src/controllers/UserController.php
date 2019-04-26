@@ -8,6 +8,9 @@ class UserController extends Controller
 {
     public function actionList()
     {
-        echo 123456;
+        // $userClassName = $this->module->userClassName;
+        // $users = $userClassName::find()->asArray()->all();
+        // var_dump($users);exit;
+        return $this->render('list');
     }
 }
