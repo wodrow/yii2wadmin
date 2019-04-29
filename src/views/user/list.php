@@ -1,39 +1,41 @@
 <?php
 /**
  * @var \yii\web\View $this
- * @var \yii\base\Model[] $users
  */
+
+ use mootensai\components\JsBlock;
+ use yii\helpers\Url;
 
 \fedemotta\datatables\DataTablesAsset::register($this);
 
 $this->title = "列表";
-$usernameAttribute = \Yii::$app->controller->module->usernameAttribute;
-$userStatusAttribute = \Yii::$app->controller->module->userStatusAttribute;
 ?>
 
 <div class="">
     <table id="example" class="display" cellspacing="0" width="100%">
         <thead>
             <tr>
-                <th>Name</th>
+                <th>Username</th>
                 <th>Status</th>
             </tr>
         </thead>
-        <tbody>
-            <?php foreach($users as $k => $v): ?>
-                <tr>
-                    <td><?=$v->$usernameAttribute ?></td>
-                </tr>
-                <tr>
-                    <td><?=$v->$userStatusAttribute ?></td>
-                </tr>
-            <?php endforeach; ?>
-        </tbody>
         <tfoot>
             <tr>
-                <th>Name</th>
+                <th>Username</th>
                 <th>Status</th>
             </tr>
         </tfoot>
     </table>
 </div>
+
+<?php JsBlock::begin(); ?>
+<script>
+    $(document).ready(function() {
+    $('#example').DataTable( {
+        "processing": true,
+        "serverSide": true,
+        "ajax": "<?=Url::to(['user/dt-ajax-list']) ?>"
+    });
+});
+</script>
+<?php JsBlock::end(); ?>
