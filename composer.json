@@ -8,8 +8,7 @@
     "require": {
         "php": ">=5.4",
         "yiisoft/yii2": ">=2.0.0",
-        "mootensai/yii2-jsblock": "^1.0",
-        "fedemotta/yii2-widget-datatables": "^1.3"
+        "wodrow/yii2wtools": "dev"
     },
     "authors": [
         {

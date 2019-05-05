@@ -6,8 +6,6 @@
  use wodrow\yii2wtools\tools\JsBlock;
  use yii\helpers\Url;
 
-\fedemotta\datatables\DataTablesAsset::register($this);
-
 $this->title = "列表";
 ?>
 
@@ -30,12 +28,8 @@ $this->title = "列表";
 
 <?php JsBlock::begin(); ?>
 <script>
-    $(document).ready(function() {
-    $('#example').DataTable( {
-        "processing": true,
-        "serverSide": true,
-        "ajax": "<?=Url::to(['user/dt-ajax-list']) ?>"
-    });
+$(document).ready(function() {
+    alert(1);
 });
 </script>
 <?php JsBlock::end(); ?>
