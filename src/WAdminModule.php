@@ -8,6 +8,8 @@ use yii\base\Module;
 class WAdminModule extends Module
 {
     public $userClassName;
+    public $userSearchClassName;
+    public $userIdAttribute = "id";
     public $usernameAttribute = "username";
     public $userStatusAttribute = "status";
     public $emailAttribute;
