@@ -3,7 +3,7 @@
  * @var \yii\web\View $this
  */
 
- use mootensai\components\JsBlock;
+ use wodrow\yii2wtools\tools\JsBlock;
  use yii\helpers\Url;
 
 \fedemotta\datatables\DataTablesAsset::register($this);
