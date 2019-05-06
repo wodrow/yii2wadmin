@@ -8,7 +8,7 @@
     "require": {
         "php": ">=5.4",
         "yiisoft/yii2": ">=2.0.0",
-        "wodrow/yii2wtools": "dev"
+        "wodrow/yii2wtools": ">=0.1.0"
     },
     "authors": [
         {
